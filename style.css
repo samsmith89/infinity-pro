@@ -157,7 +157,7 @@ body > div {
 }
 
 body {
-	background-color: #fff;
+	background-color: #eee;
 	color: #000;
 	font-family: 'Cormorant Garamond', serif;
 	font-size: 22px;
@@ -1827,7 +1827,129 @@ p.entry-meta {
 	to   { opacity: 1; }
 }
 
+/* Frontpage Hero Video
+---------------------------------------------------------------------------------------------------- */
 
+video#bgvideo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            -ms-transform: translateX(-50%) translateY(-50%);
+            -moz-transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            background: url(placeholder.jpg) no-repeat;
+            background-size: cover;
+        }
+
+
+/* Frontpage About Me
+---------------------------------------------------------------------------------------------------- */
+
+.about-txt {
+	text-align: left;
+}
+
+.about-txt p {
+	font-size: 20px;
+}
+/* Frontpage Pricing Table
+---------------------------------------------------------------------------------------------------- */
+
+.demo-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.pricing-table {
+  display: table;
+  width: 100%;
+}
+.pricing-table .pricing-option {
+  background: white;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.pricing-table .pricing-option:hover {
+  cursor: pointer;
+  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.3);
+  transform: scale(1.04);
+}
+.pricing-table .pricing-option:hover i, .pricing-table .pricing-option:hover h1, .pricing-table .pricing-option:hover span, .pricing-table .pricing-option:hover b {
+  color: #d43c67;
+}
+.pricing-table .pricing-option:hover .front {
+  opacity: 0;
+  visibility: hidden;
+}
+.pricing-table .pricing-option:hover .back {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.pricing-table .pricing-option:hover .back a.button {
+  transform: translateY(0px) !important;
+}
+.pricing-table .pricing-option hr {
+  border: none;
+  border-bottom: 1px solid #F0F0F0;
+}
+.pricing-table .pricing-option .price {
+  position: relative;
+}
+.pricing-table .pricing-option .price .front span.price {
+  margin-top: 20px;
+  display: block;
+  position: relative;
+}
+.pricing-table .pricing-option .price .front span.price b {
+  position: absolute;
+  margin-left: 2px;
+}
+.pricing-table .pricing-option .price .back {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.pricing-table .pricing-option .price .back a.button {
+  background: #d43c67;
+  padding: 15px 20px;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  font-size: 13px;
+  top: -4px;
+  left: 0;
+  right: 0;
+  width: 150px;
+  margin: auto;
+  text-transform: uppercase;
+  transform: translateY(20px);
+  transition: all 0.3s ease-in-out;
+}
+.pricing-table .pricing-option .price .back a.button:hover {
+  background: #000;
+}
+
+.pricing-option {
+	margin-bottom: 20px;
+	padding: 0 15px;
+}
+
+.pricing-option p {
+	font-size: 18px;
+}
+
+/* Override of the default .one-third class for the Pricing Table */
+.pricing-table .one-third {
+    padding: 15px 15px;
+}
 /* Media Queries
 ---------------------------------------------------------------------------------------------------- */
 
@@ -2071,6 +2193,14 @@ p.entry-meta {
 		padding-right: 10px;
 	}
 
+	#front-page-1 {
+	background: url(/wp-content/themes/infinity-pro/images/hero-vid-poster-768x432.png) no-repeat;
+	background-size: cover;
+	}
+	#bgvideo {
+	display: none;
+	}
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -2112,3 +2242,20 @@ p.entry-meta {
 	}
 
 }
+
+video#bgvideo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            -ms-transform: translateX(-50%) translateY(-50%);
+            -moz-transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            background: url(placeholder.jpg) no-repeat;
+            background-size: cover;
+        }
