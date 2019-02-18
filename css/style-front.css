@@ -845,6 +845,19 @@ Loaded on the front page */
 	animation-name: fadeInRight;
 }
 
+/* My custom styles
+---------------------------------------------------------------------------------------------------- */
+
+/* Allows the link for the "packages ID to be offset when it's scrolled" */
+#packages::before {
+  display: block;
+  content: " ";
+  margin-top: -150px;
+  height: 150px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 
 /* Media Queries
 ---------------------------------------------------------------------------------------------------- */
