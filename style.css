@@ -1999,6 +1999,21 @@ video#bgvideo {
 	margin-top: 30px;
 }
 
+/* Allows the link for the "packages ID to be offset when it's scrolled" */
+#caldera_form_1::before {
+  display: block;
+  content: " ";
+  margin-top: -250px;
+  height: 250px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Styles for Caldera Forms */
+.form-group {
+	margin-bottom: 20px;
+}
+
 /* Media Queries
 ---------------------------------------------------------------------------------------------------- */
 
@@ -2263,6 +2278,111 @@ video#bgvideo {
 
 	.custom-page .site-inner h1 {
 		font-size: 6rem;
+	}
+
+	/* Dispable pricing table on mobile */
+
+	.demo-title {
+		text-align: center;
+		margin-bottom: 50px;
+	}
+
+	.pricing-table {
+		display: table;
+		width: 100%;
+	}
+	.pricing-table .pricing-option {
+		background: white;
+		text-align: center;
+		transition: none;
+	}
+
+	.pricing-table .pricing-option:hover {
+		cursor: pointer;
+		box-shadow: none;
+		transform: none;
+	}
+	.pricing-table .pricing-option:hover i, .pricing-table .pricing-option:hover h1, .pricing-table .pricing-option:hover span, .pricing-table .pricing-option:hover b {
+		color: #d43c67;
+	}
+	.pricing-table .pricing-option:hover .front {
+		opacity: 0;
+		visibility: hidden;
+	}
+	.pricing-table .pricing-option:hover .back {
+		opacity: 1 !important;
+		visibility: visible !important;
+	}
+	.pricing-table .pricing-option:hover .back a.button {
+		transform: none;
+	}
+	.pricing-table .pricing-option hr {
+		border: none;
+		border-bottom: 1px solid #F0F0F0;
+	}
+	.pricing-table .pricing-option .price {
+		position: relative;
+	}
+	.pricing-table .pricing-option .price .front span.price {
+		margin-top: 0;
+		display: block;
+		position: relative;
+	}
+	.pricing-table .pricing-option .price .front span.price b {
+		position: absolute;
+		margin-left: 2px;
+	}
+	.pricing-table .pricing-option .price .back {
+		opacity: 0;
+		visibility: visible !important;
+		transition: none;
+	}
+	.pricing-table .pricing-option .price .back a.button {
+		background: #d43c67;
+		padding: 15px 20px;
+		display: inline-block;
+		text-decoration: none;
+		color: white;
+		position: absolute;
+		font-size: 13px;
+		top: -4px;
+		left: 0;
+		right: 0;
+		width: 150px;
+		margin: auto;
+		text-transform: uppercase;
+		transform: none;
+		transition: none;
+	}
+	.pricing-table .pricing-option .price .back a.button:hover {
+		background: #000;
+	}
+
+	.pricing-option {
+		margin-bottom: 20px;
+		padding: 0 15px;
+	}
+
+	.pricing-option p {
+		font-size: 18px;
+		margin-bottom: 20px;
+	}
+
+	/* Override of the default .one-third class for the Pricing Table */
+	.pricing-table .one-third {
+			padding: 15px 15px;
+	} */
+
+  .price {
+		display: none !important;
+	}
+
+	.back {
+		display: none !important;
+	}
+
+	.pricing-option {
+		margin-top: 20px !important;
 	}
 
 }

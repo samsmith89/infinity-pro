@@ -935,6 +935,26 @@ Loaded on the front page */
 		clear: left;
 	}
 
+	/* My custom styles
+	---------------------------------------------------------------------------------------------------- */
+
+	/* CTA div disable */
+
+	.cta-wrap {
+		display: none;
+	}
+
+	/* Pricing table disable, and that rhymes nice! */
+
+	.price {
+		display: none !important;
+	}
+
+	.back {
+		display: none !important;
+	}
+
+
 }
 
 @media only screen and (max-width: 600px) {
